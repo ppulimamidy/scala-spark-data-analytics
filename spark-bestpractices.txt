@@ -1,0 +1,28 @@
+Apache Spark - Best Practices and Tuning
+This is a collections of notes (see References about Apache Spark's best practices). The notes aim to help me design and develop better programs with Apache Spark.
+
+Introduction
+
+Best Practices To Run Faster
+Don’t collect large RDDs
+Don't use count() when you don't need to return the exact number of rows
+Picking the Right Operators
+Avoid List of Iterators
+Avoid groupByKey when performing a group of multiple items by key
+Avoid groupByKey when performing an associative reductiove operation
+Avoid reduceByKey when the input and output value types are different
+Avoid the flatMap-join-groupBy pattern
+Use TreeReduce/TreeAggregate instead of Reduce/Aggregate
+Hash-partition before transformation over pair RDD
+Use coalesce to repartition in decrease number of partition
+TreeReduce and TreeAggregate Demystified
+When to use Broadcast variable
+Joining a large and a small RDD
+Joining a large and a medium size RDD
+Which storage level to choose
+Avoiding Shuffle "Less stage, run faster"
+Use the right level of parallelism
+Serialization
+Tuning Java Garbage Collection
+References
+
